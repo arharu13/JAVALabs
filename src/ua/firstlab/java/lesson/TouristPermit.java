@@ -1,61 +1,53 @@
 package ua.firstlab.java.lesson;
 
 public class TouristPermit {
-    private static int Time_Trevel = 10;
-    public double duration_in_day;
-    public double cost_in_euro;
-    private int star_number;
-    private String name_hotel;
+    private static int timeTrevel = 24;
+    public int durationInDay;
+    public int costInEuro;
+    private int starNumber;
+    private String nameHotel;
     public String country;
-    protected int average_temp;
+    protected int averageTemp;
     protected String food;
 
-    public int getAverage_temp() {
-        return average_temp;
+    public static int getTimeTrevel() {
+        return timeTrevel;
     }
 
-    public void setAverage_temp(int average_temp) {
-        this.average_temp = average_temp;
+    public static void setTimeTrevel(int timeTrevel) {
+        TouristPermit.timeTrevel = timeTrevel;
     }
 
-    public static int getTime_trevel() {
-        return Time_Trevel;
+    public int getDurationInDay() {
+        return durationInDay;
     }
 
-    public static void setTime_trevel(int time_trevel) {
-        TouristPermit.Time_Trevel = time_trevel;
+    public void setDurationInDay(int durationInDay) {
+        this.durationInDay = durationInDay;
     }
 
-    public double getDuration_in_day() {
-        return duration_in_day;
+    public int getCostInEuro() {
+        return costInEuro;
     }
 
-    public void setDuration_in_day(double duration_in_day) {
-        this.duration_in_day = duration_in_day;
+    public void setCostInEuro(int costInEuro) {
+        this.costInEuro = costInEuro;
     }
 
-    public double getCost_in_euro() {
-        return cost_in_euro;
+    public int getStarNumber() {
+        return starNumber;
     }
 
-    public void setCost_in_euro(double cost_in_euro) {
-        this.cost_in_euro = cost_in_euro;
+    public void setStarNumber(int starNumber) {
+        this.starNumber = starNumber;
     }
 
-    public int getStar_number() {
-        return star_number;
+    public String getNameHotel() {
+        return nameHotel;
     }
 
-    public void setStar_number(int star_number) {
-        this.star_number = star_number;
-    }
-
-    public String getName_hotel() {
-        return name_hotel;
-    }
-
-    public void setName_hotel(String name_hotel) {
-        this.name_hotel = name_hotel;
+    public void setNameHotel(String nameHotel) {
+        this.nameHotel = nameHotel;
     }
 
     public String getCountry() {
@@ -66,17 +58,17 @@ public class TouristPermit {
         this.country = country;
     }
 
-    public TouristPermit( double duration_in_day, double cost_in_euro, int star_number, String name_hotel, String country, String food) {
-        this.duration_in_day = duration_in_day;
-        this.cost_in_euro = cost_in_euro;
-        this.star_number = star_number;
-        this.name_hotel = name_hotel;
-        this.country = country;
+    public String getFood() {
+        return food;
+    }
+
+    public void setFood(String food) {
         this.food = food;
     }
 
-    public TouristPermit(double duration_in_day, double cost_in_euro, int star_number, String name_hotel) {
-        this(duration_in_day, cost_in_euro, star_number, name_hotel, null, null);
+
+    public TouristPermit(int durationInDay, int costInEuro, int starNumber, String nameHotel) {
+        this(durationInDay, costInEuro, starNumber, nameHotel, null, null);
 
     }
 
@@ -87,32 +79,33 @@ public class TouristPermit {
     @Override
     public String toString() {
         return "TouristPermit{" +
-                "duration_in_day=" + duration_in_day +
-                ", cost_in_euro=" + cost_in_euro +
-                ", star_number=" + star_number +
-                ", name_hotel='" + name_hotel + '\'' +
+                "durationInDay=" + durationInDay +
+                ", costInEuro=" + costInEuro +
+                ", starNumber=" + starNumber +
+                ", nameHotel='" + nameHotel + '\'' +
                 ", country='" + country + '\'' +
                 ", food='" + food + '\'' +
                 '}';
     }
 
-    public static void   printStaticTime_Trevel() {
-        System.out.println("Time_in_hour = " + Time_Trevel);
-    }
-    public static  void  printTime_Trevel() {
-        System.out.println("Time_in_hour = " + Time_Trevel);
+    public static void printStaticTime_Trevel() {
+        System.out.println("timeInHour = " + timeTrevel);
     }
 
-    public TouristPermit(double duration_in_day, double cost_in_euro, int star_number, String name_hotel, String country, int average_temp, String food) {
-        this.duration_in_day = duration_in_day;
-        this.cost_in_euro = cost_in_euro;
-        this.star_number = star_number;
-        this.name_hotel = name_hotel;
+    public static void printTime_Trevel() {
+        System.out.println("timeInHour = " + timeTrevel);
+    }
+
+    public TouristPermit(int durationInDay, int costInEuro, int starNumber, String nameHotel, String country, String food) {
+        this.durationInDay = durationInDay;
+        this.costInEuro = costInEuro;
+        this.starNumber = starNumber;
+        this.nameHotel = nameHotel;
         this.country = country;
-        this.average_temp = average_temp;
         this.food = food;
     }
 }
+
 
 
 

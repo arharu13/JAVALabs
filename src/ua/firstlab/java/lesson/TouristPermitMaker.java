@@ -1,6 +1,6 @@
 package ua.firstlab.java.lesson;
 
- public class TouristPermitMaker {
+public class TouristPermitMaker {
     public static void main(String[] args) {
         TouristPermit loltouristPermit = new TouristPermit();
         TouristPermit normaltouristPermit = new TouristPermit(14, 250, 4, "Ocean");
@@ -14,12 +14,12 @@ package ua.firstlab.java.lesson;
 
 
         TouristPermit.printStaticTime_Trevel();
-       // loltouristPermit.printTime_Trevel();
+        loltouristPermit.printTime_Trevel();
         int itnemarray = 4;
         TouristPermit[] touristPermits = new TouristPermit[itnemarray];
 
-        for (int imen = 0; imen  < 4 ; imen++) {
-            touristPermits[imen] = new TouristPermit();
+        for (int i = 0; i < 4; i++) {
+            touristPermits[i] = new TouristPermit();
         }
 
         for (TouristPermit touristPermit : touristPermits) {
